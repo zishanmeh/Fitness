@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-color : #E6533C;
+    --white-2 : rgba(255, 255, 255, 0.5);
+}
+body {
+    background-color: #000000;
+    color: white;
+    font-family: "Inter", sans-serif;
+}
+
+/* Shared styles */
+section {
+    width: 90%;
+    margin: auto;
+}
+h1 {
+    font-size: 2rem;
+}
+button {
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+}
+button > a {
+    text-decoration: none;
+    color: white;
+}
+.primary-btn {
+    background-color: var(--primary-color);
+    padding: 8px 20px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+}
+/* Nav styles */
+header {
+    background: linear-gradient(to top, rgba(17, 17, 17, 1), rgba(119, 119, 119, 0));
+}
+.navlogo > #menu-bar{
+    display: none;
+    cursor: pointer;
+}
+.navlogo h1 {
+    color: var(--primary-color);
+    font-style: italic;
+}
+.navlogo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0px;
+}
+.nav-items ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 44px;
+    list-style-type: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+}
+.nav-items ul li {
+    padding: 8px 20px;
+    border-radius: 15px;
+}
+.nav-items ul li a {
+    text-decoration: none;
+    color: white;
+}
+.nav-items ul #home {
+    background-color: var(--primary-color);
+}
+/* Hero section */
+.hero {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+}
+.hero-details {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+.hero-details h1 {
+    font-size: 3.5rem;
+    width: 70%;
+}
+.hero-details p {
+    color: var(--white-2);
+    font-size: 0.8rem;
+    width: 80%;
+}
+.download-btn {
+    background: none;
+    padding: 8px 20px;
+    border: 1px solid white;
+    border-radius: 20px;
+    margin-left: 10px;
+}
+.hero-bg-img {
+    background-image: url("../images/hero-bg.png");
+    background-size: contain;
+    width: 100%;
+    height: 450px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+
+}
+.freevideos, .tutorial-videos {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 20px;
+    width: 180px;
+}
+.freevideos p , .tutorial-videos p {
+    font-size: 0.8rem;
+}
+.tutorial-videos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 13%;
+}
+.freevideos {
+    position: absolute;
+    right: 15%;
+    top: 13%;
+}
+.tutorial-videos-box {
+    width: 30px;
+    height: 30px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}
+
+@media screen and (max-width:576px) {
+
+    body {
+        padding: 30px;
+    }
+    
+    /* Hero */
+    .hero {
+        grid-template-columns: 1fr;
+    }
+    .freevideos {
+        right: 0;
+    }
+    .hero-btns {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
+
+}
+/* Tablet styles */
+
+@media screen and (max-width: 768px) {
+    
+    .hero {
+        grid-template-columns: 1fr;
+    }
+    /* Nav bar */
+    .nav-items {
+        display: none;
+    }
+    .navlogo > #menu-bar {
+        display: block;
+    }
+    .navlog {
+        width: 100%;
+    }
+}
