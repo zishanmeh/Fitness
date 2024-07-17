@@ -18,7 +18,8 @@ body {
 /* Shared styles */
 section {
     width: 90%;
-    margin: 50px auto;
+    margin: auto;
+    margin-bottom: 100px;
 }
 h1 {
     font-size: 2rem;
@@ -160,6 +161,7 @@ nav {
 .change-habit-cards {
     display: grid;
     grid-template-columns: repeat(4,1fr);
+    gap: 16px;
     margin-top: 50px;
 }
 .habit-card img {
@@ -176,6 +178,41 @@ nav {
     margin: auto;
     color: var(--white-2);
 }
+
+/* Our focus section */
+.our-focus {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 48px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #222222;
+    padding: 30px 40px;
+    border-radius: 20px;
+}
+
+.our-focus-details-img img {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+}
+.our-focus-details {
+    width: 80%;
+}
+.our-focus-details h1 {
+    width: 65%;
+}
+.our-focus-details p {
+    color: var(--white-2);
+    margin: 20px 0px;
+    line-height: 1.6rem;
+}
+
+
+
+
+
+
 
 /* Tablet styles */
 
@@ -198,6 +235,13 @@ nav {
     .change-habit-cards {
         grid-template-columns: repeat(2,1fr);
         row-gap: 24px;
+    }
+    /* Our focus section */
+    .our-focus-details h1 {
+        width: 100%;
+    }
+    .our-focus-details {
+        width: 100%;
     }
 }
 
@@ -226,6 +270,10 @@ nav {
     .change-habit-cards {
         grid-template-columns: 1fr;
         row-gap: 24px;
+    }
+    /* Our focus section */
+    .our-focus{
+        grid-template-columns: 1fr;
     }
 
 }
