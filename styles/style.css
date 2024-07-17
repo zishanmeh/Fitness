@@ -44,6 +44,9 @@ button > a {
 header {
     background: linear-gradient(to top, rgba(17, 17, 17, 1), rgba(119, 119, 119, 0));
 }
+header section:first-child {
+    margin-bottom: 30px;
+}
 .navlogo > #menu-bar{
     display: none;
     cursor: pointer;
@@ -322,6 +325,60 @@ nav {
     line-height: 1.5rem;
 }
 
+/* Footer */
+footer {
+    background-color: #222222;
+    padding: 40px 0px;
+}
+.footer-details {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+.social-links h1 {
+    margin-bottom: 20px;
+}
+.social-links ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.social-links ul li a{
+    text-decoration: none;
+    color: var(--white-2);
+    transition: 0.5s ease;
+}
+.social-links ul li a:hover {
+    color: var(--primary-color);
+}
+.footer-about h1 {
+    color: var(--primary-color);
+    font-style: italic;
+    margin-bottom: 20px;
+    font-size: 3rem;
+}
+
+.footer-about p {
+    font-size: 0.9rem;
+    color: var(--white-2);
+    line-height: 1.5rem;
+}
+
+footer section hr {
+    margin: 40px 0px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+footer section .copyright-alert {
+    text-align: center;
+    color: var(--white-2);
+    font-weight: 0.9rem;
+}
+footer section {
+    margin-bottom: 0;
+}
 
 
 
@@ -371,6 +428,10 @@ nav {
     .meet-our-team-cards {
         grid-template-columns: repeat(2,1fr);
     }
+    /* Footer */
+    .footer-details {
+        grid-template-columns: repeat(2,1fr);
+    }
 }
 
 
@@ -410,6 +471,10 @@ nav {
     }
     .meet-our-tem-details p {
         width: 100%;
+    }
+    /* Footer */
+    .footer-details {
+        grid-template-columns: 1fr;
     }
 
 }
