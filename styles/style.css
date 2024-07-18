@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inter:wght@100..900&display=swap');
 
 *{
     margin: 0;
@@ -101,6 +101,9 @@ nav {
 .hero-details h1 {
     font-size: 3.5rem;
     width: 70%;
+}
+.hero-details h1 > span {
+    font-family: "Dancing Script", cursive;
 }
 .hero-details p {
     color: var(--white-2);
@@ -324,6 +327,71 @@ nav {
     margin: 20px auto 0px auto;
     line-height: 1.5rem;
 }
+/* Our packages section */
+.our-packages {
+    display: grid;
+    grid-template-columns: repeat(3,3fr);
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    background-color: #222222;
+    padding: 20px;
+    border-radius: 20px;
+}
+.packages-card{
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--white-2);
+    border-radius: 20px;
+    transition: 0.5s ease;
+}
+.packages-card:hover{
+    transform: scale(1.03);
+}
+.package-card-details {
+    padding: 20px;
+}
+.package-card-details h2 {
+    color: white;
+}
+.packages-card ul {
+    list-style-type: none;
+    margin: 20px 0px;
+}
+.packages-card ul li i{
+    margin-right: 10px;
+}
+.packages-card ul li {
+    margin-bottom: 10px;
+}
+.packages-card ul li .fa-circle-xmark{
+    color: red;
+}
+.packages-card ul li .fa-circle-check{
+    color: green;
+}
+.packages-card img {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    height: 200px;
+}
+.package-enroll {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+.package-enroll h3 {
+    color: white;
+}
+.our-packages-details{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.our-packages-details p {
+    margin-top: 10px;
+    color: var(--white-2);
+    font-size: 0.9rem;
+}
 
 /* Footer */
 footer {
@@ -432,6 +500,13 @@ footer section {
     .footer-details {
         grid-template-columns: repeat(2,1fr);
     }
+    /* Our packages */
+    .our-packages {
+        grid-template-columns: 1fr;
+    }
+    .packages-card img {
+        height: 300px;
+    }
 }
 
 
@@ -475,6 +550,9 @@ footer section {
     /* Footer */
     .footer-details {
         grid-template-columns: 1fr;
+    }
+    .packages-card img {
+        height: 200px;
     }
 
 }
