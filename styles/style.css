@@ -40,6 +40,9 @@ button > a {
     border: none;
     color: white;
 }
+.bmi-calc-row3 select option, .bmi-calc-row2 option{
+    color: black;
+}
 /* Nav styles */
 header {
     background: linear-gradient(to top, rgba(17, 17, 17, 1), rgba(119, 119, 119, 0));
@@ -282,10 +285,10 @@ nav {
     color: var(--white-2);
     width: 100%;
 }
-.select-option{
+/* .select-option{
     color: var(--white-2);
     background-color: black;
-}
+} */
 
 /* Meet our team */
 .team-card img {
